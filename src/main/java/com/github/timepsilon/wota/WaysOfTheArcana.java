@@ -1,10 +1,13 @@
 package com.github.timepsilon.wota;
 
-import net.minecraft.world.level.block.Block;
+
+import com.github.timepsilon.wota.common.item.tarot.ModItems;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
@@ -20,20 +23,33 @@ import java.util.stream.Collectors;
 public class WaysOfTheArcana {
 
     public static final String MOD_ID = "waysofthearcana";
-
-    // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
 
     public WaysOfTheArcana() {
+
+        //Register items
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        ModItems.register(modEventBus);
+
+
         // Register the setup method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        modEventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
+        modEventBus.addListener(this::enqueueIMC);
         // Register the processIMC method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
+        modEventBus.addListener(this::processIMC);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+
+    }
+
+    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+    public static class ClientModEvents {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event) {
+        }
     }
 
     private void setup(final FMLCommonSetupEvent event) {
