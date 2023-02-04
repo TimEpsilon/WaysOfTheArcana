@@ -1,3 +1,27 @@
 {
-  "item.waysofthearcana.card_fool" : "The Fool"
+  "item.waysofthearcana.card_fool" : "The Fool",
+  "item.waysofthearcana.card_magician" : "The Magician",
+  "item.waysofthearcana.card_priestess" : "The High Priestess",
+  "item.waysofthearcana.card_empress" : "The Empress",
+  "item.waysofthearcana.card_emperor" : "The Emperor",
+  "item.waysofthearcana.card_hierophant" : "The Hierophant",
+  "item.waysofthearcana.card_lovers" : "The Lovers",
+  "item.waysofthearcana.card_chariot" : "The Chariot",
+  "item.waysofthearcana.card_strength" : "The Strength",
+  "item.waysofthearcana.card_hermit" : "The Hermit",
+  "item.waysofthearcana.card_fortune" : "The Wheel of Fortune",
+  "item.waysofthearcana.card_justice" : "The Justice",
+  "item.waysofthearcana.card_hanged" : "The Hanged",
+  "item.waysofthearcana.card_death" : "The Death",
+  "item.waysofthearcana.card_temperance" : "The Temperance",
+  "item.waysofthearcana.card_devil" : "The Devil",
+  "item.waysofthearcana.card_tower" : "The Tower",
+  "item.waysofthearcana.card_star" : "The Star",
+  "item.waysofthearcana.card_moon" : "The Moon",
+  "item.waysofthearcana.card_sun" : "The Sun",
+  "item.waysofthearcana.card_judgement" : "The Judgement",
+  "item.waysofthearcana.card_world" : "The World",
+
+
+  "itemGroup.arcana_tab" : "Tarot Cards"
 }
