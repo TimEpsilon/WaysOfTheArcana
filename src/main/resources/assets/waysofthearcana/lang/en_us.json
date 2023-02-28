@@ -21,7 +21,9 @@
   "item.waysofthearcana.card_sun" : "The Sun",
   "item.waysofthearcana.card_judgement" : "The Judgement",
   "item.waysofthearcana.card_world" : "The World",
+  "item.waysofthearcana.tome_of_arkana" : "Tome of Arkana",
 
+  "text.waysofthearcana.book.title" : "Tome of Arkana",
 
   "itemGroup.arcana_tab" : "Tarot Cards"
 }

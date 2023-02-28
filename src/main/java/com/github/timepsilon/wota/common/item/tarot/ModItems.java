@@ -7,14 +7,14 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 public class ModItems {
 
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, WaysOfTheArcana.MOD_ID);
 
+    public static final RegistryObject<Item> TOME_OF_ARKANA = ITEMS.register("tome_of_arkana",
+            () -> new TomeOfArkanaItem(new Item.Properties().tab(CreativeTab.ARCANA_TAB).stacksTo(1)));
     public static final RegistryObject<Item> CARD_FOOL = ITEMS.register("card_fool",
             () -> new Item(new Item.Properties().tab(CreativeTab.ARCANA_TAB)));
     public static final RegistryObject<Item> CARD_MAGICIAN = ITEMS.register("card_magician",
@@ -59,8 +59,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(CreativeTab.ARCANA_TAB)));
     public static final RegistryObject<Item> CARD_WORLD = ITEMS.register("card_world",
             () -> new Item(new Item.Properties().tab(CreativeTab.ARCANA_TAB)));
-
-
 
 
 
